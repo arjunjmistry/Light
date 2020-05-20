@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+    font-family: monospace;
+}
+
+#video {
+    position: fixed;
+    display: block;
+    top: 0px;
+    min-width: 100%;
+    
+}
+
+button {
+    font-family: monospace;
+}
+
+#gameMode {
+    background-color: black;
+    position: fixed;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+    border-radius: 5px;
+
+}
+    #instruction {
+        position: absolute;
+        color: whitesmoke ;
+        top: 17px;
+    }
+
+    #buttonsGame {
+        position: absolute;
+        bottom: 17px;
+    }
+
+    #result {
+        position: absolute;
+        padding: 5px;
+        color: whitesmoke ;
+        text-align: right;
+        right: 1%;
+        bottom: 5%;
+    }
