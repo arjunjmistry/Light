@@ -40,6 +40,7 @@ var videoNumber = sessionStorage.getItem('videoNumber')
   sessionStorage.setItem('videoNumber',JSON.stringify(videoNumber))
 
   console.log(array[i])
+  launchBtn.disabled = true
 
 }
 
@@ -100,6 +101,7 @@ doneBtn.onclick = function() {
   startBtn.disabled = false
   detectBtn.disabled = false
   speedBtn.disabled = false
+  launchBtn.disabled = false
   if (i < 5) {downloadBtn.disabled = true} else if (i = 5) {downloadBtn.disabled = false}
 }
 
