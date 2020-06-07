@@ -67,7 +67,7 @@ function showDivs(n) {
 
 
 // range of numbers 1 - 70
-var array = [];i=1;while(array.push(i++)<70);
+var array = [];b=1;while(array.push(b++)<70);
 //Shuffle function
 function shuffle(array) {
   let count = array.length;
@@ -82,28 +82,29 @@ array.unshift('E1','E2')
 
 // Load (next) video
 launchBtn.onclick = function () {
-  if (i < 70) {i++} else if (i = 70) {i = 0}
-video.src = array[i] + '.mp4'
+  if (b < 71) {b++} else if (b = 71) {b = 0}
+video.src = array[b] + '.mp4'
 video.pause()
 document.getElementById('video').style.display = 'block'
 var videoNumber = sessionStorage.getItem('videoNumber')
   videoNumber = videoNumber? JSON.parse(videoNumber) : []
-  videoNumber.push(array[i])
+  videoNumber.push(array[b])
   sessionStorage.setItem('videoNumber',JSON.stringify(videoNumber))
 
-  console.log(array[i])
+  console.log(array[b])
   launchBtn.disabled = true
   startBtn.disabled = false
-  detectBtn.disabled = false
-  speedBtn.disabled = false
-  nobikeBtn.disabled = false
-  doneBtn.disabled = false
+
+  
 
 }
 
 // Start button click -> play video -> checks for existing data -> appends new time data -> sends back to storage
 startBtn.addEventListener ('click', function() {
   video.play()
+  detectBtn.disabled = false
+  speedBtn.disabled = false
+  nobikeBtn.disabled = false
 })
 
 
@@ -149,6 +150,7 @@ speedBtn.onclick = function(speed2Time, speedTime) {
   console.log(speed2Time)
   speedBtn.disabled = true
   nobikeBtn.disabled = true
+  doneBtn.disabled = false
   
 }
 
@@ -169,6 +171,7 @@ nobikeBtn.onclick = function() {
   detectBtn.disabled = true
   speedBtn.disabled = true
   nobikeBtn.disabled = true
+  doneBtn.disabled = false
 }
 
 // Enables all buttons -> Hide video
@@ -185,22 +188,22 @@ doneBtn.onclick = function() {
 
  
 
-  if (i < 69) {downloadBtn.disabled = true} else if (i = 69) {downloadBtn.disabled = false}
-  if (i < 69) {
+  if (b < 71) {downloadBtn.disabled = true} else if (b = 71) {downloadBtn.disabled = false}
+  if (b < 71) {
     launchBtn.disabled = false 
     startBtn.disabled = false 
     detectBtn.disabled = false 
     speedBtn.disabled = false 
     nobikeBtn.disabled = false 
     doneBtn.disabled = false} 
-  else if (i = 69) {
+  else if (b = 71) {
     launchBtn.disabled = true 
     startBtn.disabled = true 
     detectBtn.disabled = true 
     speedBtn.disabled = true
     nobikeBtn.disabled = true 
     doneBtn.disabled = true} 
-  if (i < 69) {document.getElementById('questionMode').classList.remove('hide')} else if (i = 69) {document.getElementById('questionMode').classList.remove('hide')}
+  if (b < 71) {document.getElementById('questionMode').classList.remove('hide')} else if (b = 71) {document.getElementById('questionMode').classList.remove('hide')}
 }
 
 
