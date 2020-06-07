@@ -1,0 +1,188 @@
+body {
+    background-color: black;
+    font-family: monospace;
+}
+
+button {
+    font-family: monospace;
+}
+
+#welcomeMode {
+    position: relative;
+    margin: auto;
+    top: 100px;
+    max-width: 60%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px;
+    max-height: 60%;
+}
+
+    .Header {
+    position: relative;
+    color: whitesmoke;
+    }
+
+    .welcomeText {
+    position: relative;
+    color: whitesmoke;
+    }
+    .textWrapper {
+    padding: 30px;
+    }
+    .buttonWrapper {
+    padding:10px;
+    }
+    #welcomeButton {
+    position: relative;
+    background-image: linear-gradient(red, yellow);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#video {
+    position: fixed;
+    display: block;
+    top: 0px;
+    min-width: 100%;
+}
+
+#instructionMode {
+    position: relative;
+    margin: auto;
+    top: 10px;
+    max-width: 60%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px;
+    max-height: 60%;
+}
+
+.instructionTextWrapper {
+    padding: 10px;
+}
+
+.instructionText {
+    position: relative;
+    color: whitesmoke;
+
+}
+
+#gameMode {
+    background-color: black;
+    position: fixed;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+    border-radius: 5px;
+
+}
+    #instruction {
+        position: absolute;
+        color: whitesmoke ;
+        top: 17px;
+    }
+
+    #buttonsGame {
+        position: absolute;
+        bottom: 17px;
+    }
+
+    #result {
+        position: absolute;
+        padding: 5px;
+        color: whitesmoke ;
+        text-align: right;
+        right: 1%;
+        bottom: 5%;
+    }
+
+.hide {
+    display:none;
+}
+
+#questionMode {
+    background-color: black;
+    position: fixed;
+    height: 240px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+    border-radius: 5px;
+}
+    #Qheader {
+        position: absolute;
+        color: whitesmoke ;
+        bottom: 0px;
+        right: 30px;
+    }
+
+    #Q1 {
+        position: absolute;
+        color: whitesmoke ;
+        top: 15px;
+    }
+
+    #Q1A {
+        position: absolute;
+        top: 45px;
+    }
+
+    #Q2 {
+        position: absolute;
+        color: whitesmoke ;
+        top: 75px;
+    }
+
+    #Q2A {
+        position: absolute;
+        color: whitesmoke ;
+        top: 105px;
+    }
+
+    #Q3 {
+        position: absolute;
+        color: whitesmoke ;
+        top: 135px;
+    }
+
+    #Q3A {
+        position: absolute;
+        top: 165px;
+    }
+
+    #Q4 {
+        position: absolute;
+        color: whitesmoke ;
+        top: 195px;
+    }
+
+    #Q4A {
+        position: absolute;
+        top: 225px;
+    }
+
+    #questionDone {
+        position: absolute;
+        top: 255px;
+    }
+
+    .disabledButton {
+        pointer-events: none;
+        opacity: 0.4;
+    }

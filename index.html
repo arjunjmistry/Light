@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <link href="styles.css" rel="stylesheet" type='text/css'>
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+    <div id=welcomeMode>
+        <div>
+        <h1 class=Header>Welcome to Bike Light Simulator</h1>
+        </div>
+        <div class=textWrapper>
+        <p1 class=welcomeText>Thank you for participating in this experiment. Before you begin, please make sure you have read the Participant Information Form and signed the Participant and Questionnaire Consent Forms. The experiment will take approximately 1 hour to complete, you may take short breaks in between. During the experiment you will be shown 72 randomly ordered animations; the first two will be practice rounds followed by the experiment. You will need to respond to particular events by clicking on buttons, then rate the difficulty of the task with a short questionnaire. Afterwards. when all videos have been shown, you will be able to download a results file which you will then need to send to the researcher either on arjunjmistry@hotmail.com or via social messenger. Press continue to see an instructional walkthrough.</p1>
+        </div>
+        <div class=buttonWrapper>
+        <button type=button id=welcomeButton>Continue</button>
+        </div>
+    </div>
+
+    <div id=instructionMode class="hide">
+        <div>
+        <h1 class=Header>Instructions</h1>
+       </div>
+        <div class='mySlides'>
+            <img src="T1.jpg" style="width:100%">
+            <p1 class=instructionText>click LOAD to load first video</p1>
+        </div>
+        <div class='mySlides'>
+            <img src="T2.jpg" style="width:100%">
+            <p1 class=instructionText>click START to play the video and begin the experiment</p1>
+        </div>
+        <div class='mySlides'>
+            <img src="T3.jpg" style="width:100%">
+            <p1 class=instructionText>click DETECT BIKE as soon as you first detect a bicycle. NOTE that in some animations no bicycle will appear, in which case click NO BICYCLE</p1>
+        </div>
+        <div class='mySlides'>
+            <img src="T4.jpg" style="width:100%">
+            <p1 class=instructionText>click DETECT CHANGE IN SPEED when you detect that the bicycle has either slowed down or sped up</p1>
+        </div>
+        <div class='mySlides'>
+            <img src="T5.jpg" style="width:100%">
+            <p1 class=instructionText>click DONE once the video has ended</p1>
+        </div>
+        <div class='mySlides'>
+            <img src="T6.jpg" style="width:100%">
+            <p1 class=instructionText>complete the questionnaire. click NO if no bicycle was present in the video</p1>
+        </div>
+        <div class='mySlides'>
+            <img src="T7.jpg" style="width:100%">
+            <p1 class=instructionText>CLICK HERE WHEN DONE to begin the next animation. There are 72 animations in total, the first 2 will be practice rounds.</p1>
+        </div>
+        <div class='mySlides'>
+            <img src="T8.jpg" style="width:100%">
+            <p1 class=instructionText>once all videos have been completed click DOWNLOAD REPORT and send the downloaded excel file to the researcher</p1>
+        </div>
+        <div class=buttonWrapper>
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button id="startGame">start game</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+    </div>
+
+    <div id=videoMode class="hide">
+    <video id=video width="1280" height="720" >
+        <source src="/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </div>
+
+    <div id=gameMode class="hide">
+        <div>
+        <p2 id=instruction >(Load video -> Start -> Detect bike -> detect ∆ in speed -> Done), then download report</p2>
+        </div>
+        <div id=buttonsGame>
+        <button id=launchBtn>Load video</button>
+        <button id=startBtn>Start</button>
+        <button id=detectBtn>Detect bike</button>
+        <button id=speedBtn>Detect change in speed</button>
+        <button id=nobikeBtn>No Bicycle</button>
+        <button id=doneBtn>Done</button>
+        <button id=downloadBtn >Download report</button>
+        </div>
+        <div>
+        <p1 id=result>Result</h1>
+        </div>
+        </div>
+    </div>
+
+    <div id=questionMode class=hide>
+    <h2 id=Qheader>Questionnaire</h2>
+    <p2 id=Q1>Did you detect a cyclist approaching?</p2>
+            <div id=Q1A>
+                <button id=q1a1 class="btn1">Yes</button>
+                <button id=q1a2 class="btn1">No</button>
+            </div>
+            
+            <p2 id=Q2>On a scale of 1 to 10, with 1 being very easy and 10 being very difficult how difficult was it to detect the cyclist approaching?</p2>
+            <div id=Q2A>
+                <p2 id=btn2 class="btn2"></p2>
+
+            </div>
+            <p2 id=Q3>On a scale of 1 to 10, with 1 being very easy and 10 being very difficult, How difficult was it to detect the change of speed?</p2>
+            <div id=Q3A>
+                <p2 id=btn3 class="btn3"></p2>
+            </div>
+
+            <p2 id=Q4>When you detected the change of speed did you think the cyclist was slowing down or speeding up?</p2>
+            <div id=Q4A>
+                <button id=q4a1 class="btn4">Speeding up</button>
+                <button id=q4a2 class="btn4">Slowing down</button>
+            </div>
+        <button id=questionDone class="btn">Click here when done!</button>
+    </div>
+
+            
+
+
+</body>
+</html>
