@@ -327,6 +327,18 @@ q4a2.onclick = function() {
     console.log(btn4Existing)
 }
 
+q4a3.onclick = function() {
+  var q4a1_Inner = q4a3.innerHTML
+    var btn4Existing = sessionStorage.getItem('question4')
+    btn4Existing = btn4Existing? JSON.parse(btn4Existing) : []
+    btn4Existing.push(q4a1_Inner)
+    sessionStorage.setItem('question4',JSON.stringify(btn4Existing))
+  
+    document.getElementById('Q4A').classList.add('disabledButton')
+    document.getElementById('questionDone').classList.remove('disabledButton')
+    console.log(btn4Existing)
+}
+
 // END QUESTIONNAIRE:
 const questionDone = document.getElementById('questionDone')
 questionDone.onclick = function () {
