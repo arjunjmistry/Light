@@ -158,12 +158,12 @@ speedBtn.onclick = function(speed2Time, speedTime) {
 nobikeBtn.onclick = function() {
   var detectExisting = sessionStorage.getItem('detectTime')
   detectExisting = detectExisting? JSON.parse(detectExisting) : []
-  detectExisting.push('0')
+  detectExisting.push('NB')
   sessionStorage.setItem('detectTime',JSON.stringify(detectExisting))
 
   var speedExisting = sessionStorage.getItem('speedTime')
   speedExisting = speedExisting? JSON.parse(speedExisting) : []
-  speedExisting.push('0')
+  speedExisting.push('NB')
   sessionStorage.setItem('speedTime',JSON.stringify(speedExisting))
 
   result.innerHTML = 'no bike'
