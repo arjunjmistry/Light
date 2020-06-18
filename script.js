@@ -19,7 +19,7 @@ detectBtn.disabled = true
 speedBtn.disabled = true
 nobikeBtn.disabled = true
 doneBtn.disabled = true
-//downloadBtn.disabled = true
+downloadBtn.disabled = true
 document.getElementById('questionDone').classList.add('disabledButton')
 
 // Welcome page -> click button -> records screen dims -> hides welcome screen
