@@ -372,8 +372,8 @@ downloadBtn.onclick = function downloadCSV() {
   hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv)
   hiddenElement.target = '_blank'
   hiddenElement.download = 'the results are in.csv'
-
+  document.body.appendChild(hiddenElement)
   hiddenElement.click()
-
+  document.body.removeChild(hiddenElement)
 }
 
