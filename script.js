@@ -304,6 +304,7 @@ for (i=1; i<=10; i++) {
 // QUESTION 4: Listen for click -> Store value in session storage -> Disable buttons
 const q4a1 = document.getElementById('q4a1')
 const q4a2 = document.getElementById('q4a2')
+const q4a3 = document.getElementById('q4a3')
 q4a1.onclick = function() {
     var q4a1_Inner = q4a1.innerHTML
     var btn4Existing = sessionStorage.getItem('question4')
@@ -317,6 +318,18 @@ q4a1.onclick = function() {
 }
 q4a2.onclick = function() {
   var q4a1_Inner = q4a2.innerHTML
+    var btn4Existing = sessionStorage.getItem('question4')
+    btn4Existing = btn4Existing? JSON.parse(btn4Existing) : []
+    btn4Existing.push(q4a1_Inner)
+    sessionStorage.setItem('question4',JSON.stringify(btn4Existing))
+  
+    document.getElementById('Q4A').classList.add('disabledButton')
+    document.getElementById('questionDone').classList.remove('disabledButton')
+    console.log(btn4Existing)
+}
+
+q4a3.onclick = function() {
+  var q4a1_Inner = q4a3.innerHTML
     var btn4Existing = sessionStorage.getItem('question4')
     btn4Existing = btn4Existing? JSON.parse(btn4Existing) : []
     btn4Existing.push(q4a1_Inner)
@@ -372,8 +385,8 @@ downloadBtn.onclick = function downloadCSV() {
   hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv)
   hiddenElement.target = '_blank'
   hiddenElement.download = 'the results are in.csv'
-  
+
   hiddenElement.click()
-  
+
 }
 
