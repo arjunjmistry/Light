@@ -19,7 +19,7 @@ detectBtn.disabled = true
 speedBtn.disabled = true
 nobikeBtn.disabled = true
 doneBtn.disabled = true
-downloadBtn.disabled = true
+//downloadBtn.disabled = true
 document.getElementById('questionDone').classList.add('disabledButton')
 
 // Welcome page -> click button -> records screen dims -> hides welcome screen
@@ -327,18 +327,6 @@ q4a2.onclick = function() {
     console.log(btn4Existing)
 }
 
-q4a3.onclick = function() {
-  var q4a1_Inner = q4a3.innerHTML
-    var btn4Existing = sessionStorage.getItem('question4')
-    btn4Existing = btn4Existing? JSON.parse(btn4Existing) : []
-    btn4Existing.push(q4a1_Inner)
-    sessionStorage.setItem('question4',JSON.stringify(btn4Existing))
-  
-    document.getElementById('Q4A').classList.add('disabledButton')
-    document.getElementById('questionDone').classList.remove('disabledButton')
-    console.log(btn4Existing)
-}
-
 // END QUESTIONNAIRE:
 const questionDone = document.getElementById('questionDone')
 questionDone.onclick = function () {
@@ -384,6 +372,8 @@ downloadBtn.onclick = function downloadCSV() {
   hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv)
   hiddenElement.target = '_blank'
   hiddenElement.download = 'the results are in.csv'
+  document.body.appendChild(hiddenElement)
   hiddenElement.click()
+  document.body.removeChild(hiddenElement)
 }
 
